@@ -20,6 +20,12 @@ const interviewRouter = require("./routes/interview.routes")
 app.use("/api/auth", authRouter)
 app.use("/api/interview", interviewRouter)
 
+app.get("/", (req, res) => {
+  res.json({
+    status: "success",
+    message: "Backend is running"
+  });
+});
 
 
 module.exports = app
